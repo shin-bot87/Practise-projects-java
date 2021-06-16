@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/IDM/Documents/Udemy/Universidad%20Java%202021%20%20De%20Cero%20a%20Master/Java/CatalogoPeliculas/src/es/idm/peliculas/datos/IAccesoDatos.java</file>
+            <file>file:/C:/Users/IDM/Documents/Udemy/Universidad%20Java%202021%20%20De%20Cero%20a%20Master/Java/CatalogoPeliculas/src/es/idm/peliculas/excepciones/AccesoDatosEx.java</file>
+            <file>file:/C:/Users/IDM/Documents/Udemy/Universidad%20Java%202021%20%20De%20Cero%20a%20Master/Java/CatalogoPeliculas/src/es/idm/peliculas/excepciones/EscrituraDatosEx.java</file>
+            <file>file:/C:/Users/IDM/Documents/Udemy/Universidad%20Java%202021%20%20De%20Cero%20a%20Master/Java/CatalogoPeliculas/src/es/idm/peliculas/datos/AccesoDatosImpl.java</file>
+            <file>file:/C:/Users/IDM/Documents/Udemy/Universidad%20Java%202021%20%20De%20Cero%20a%20Master/Java/CatalogoPeliculas/src/es/idm/peliculas/excepciones/LecturaDatosEx.java</file>
+            <file>file:/C:/Users/IDM/Documents/Udemy/Universidad%20Java%202021%20%20De%20Cero%20a%20Master/Java/CatalogoPeliculas/src/es/idm/peliculas/presentacion/CatalogoPeliculasPresentacion.java</file>
+            <file>file:/C:/Users/IDM/Documents/Udemy/Universidad%20Java%202021%20%20De%20Cero%20a%20Master/Java/CatalogoPeliculas/peliculas.txt</file>
+            <file>file:/C:/Users/IDM/Documents/Udemy/Universidad%20Java%202021%20%20De%20Cero%20a%20Master/Java/CatalogoPeliculas/src/es/idm/peliculas/servicio/ICatalogoPeliculas.java</file>
+            <file>file:/C:/Users/IDM/Documents/Udemy/Universidad%20Java%202021%20%20De%20Cero%20a%20Master/Java/CatalogoPeliculas/src/es/idm/peliculas/servicio/CatalogoPeliculasImpl.java</file>
+            <file>file:/C:/Users/IDM/Documents/Udemy/Universidad%20Java%202021%20%20De%20Cero%20a%20Master/Java/CatalogoPeliculas/src/es/idm/peliculas/domain/Pelicula.java</file>
+        </group>
+    </open-files>
+</project-private>
