@@ -25,7 +25,7 @@ public class Conexion {
         smtm.close();
     }
 
-    public static void close(PreparedStatement smtm) throws SQLException {//Metodo "prepare" que funciona mas optimo
+    public static void close(PreparedStatement smtm) throws SQLException {
         smtm.close();
     }
     
