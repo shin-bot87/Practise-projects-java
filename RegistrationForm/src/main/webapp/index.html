@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="recursos/style.css" />
+        <script type="text/javascript" src="recursos/funciones.js"></script>
+    </head>
+    <body>
+        <!--Place here the name and path from with the same project name-->
+        <form name="form1" action="/RegistrationForm/servlet" method="post"
+              onsubmit="return formSuccess(this)">
+            <input type="hidden" name="hidden" value="hiddenValue" />
+            <table width="200" id="colDesign">
+                <caption>
+                    Registration Form
+                </caption>
+                <tr>
+                    <td class="column">
+                        User: (*)
+                    </td>
+                    <td>
+                        <input class="default" type="text" name="user"
+                               value="Type your username" onfocus="this.select()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="column">
+                        Password: (*)
+                    </td> 
+                    <td>
+                        <input class="default" type="password" name="password"
+                               onfocus="this.select()" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="column">
+                        Internet Technology: (*)
+                    </td> 
+                    <td>
+                        Java <input type="checkbox" name="technology" value="java">
+                        &nbsp;&nbsp;&nbsp;
+                        .Net<input type="checkbox" name="technology" value="net">
+                        &nbsp;&nbsp;&nbsp;
+                        Php<input type="checkbox" name="technology" value="php">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="column">
+                        Gender: (*)
+                    </td> 
+                    <td>
+                        Male<input type="radio" name="gender" value="M">
+                        &nbsp;&nbsp;&nbsp;
+                        Female<input type="radio" name="gender" value="F">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="column">
+                        Occupation: (*)
+                    </td> 
+                    <td>
+                        <select name="occupation" class="default">
+                            <option value="">Choose your occupation</option>
+                            <option value="1">Teacher</option>
+                            <option value="2">Engineer</option>
+                            <option value="3">Retired</option>
+                            <option value="4">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="column">
+                        Favorite Music:
+                    </td> 
+                    <td>
+                        <select name="music" multiple class="default">
+                            <option value="rock">Rock</option>
+                            <option value="pop">Pop</option>
+                            <option value="salsa">Salsa</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="column">
+                        Comments:
+                    </td> 
+                    <td>
+                        <textarea name="comments" cols="30" rows="2"
+                                  class="default" onfocus="this.select()">
+                                Type something...
+                        </textarea>
+                    </td>
+                </tr>
+                <tr style="text-align: center">
+                    <td>
+                        <input type="reset" value="Reset" class="default" />
+                    </td>
+                    <td>
+                        <input type="submit" value="Send" class="default" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
