@@ -1,0 +1,4 @@
+Para que el programa funcione se ha de utilizar la base de datos llamada 'test' hecha en MySql.
+Colocarla en la siguiente ruta:
+
+C:\ProgramData\MySQL\MySQL Server (version que tu tengas)\data\
