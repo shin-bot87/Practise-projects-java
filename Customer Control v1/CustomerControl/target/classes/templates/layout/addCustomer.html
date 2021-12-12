@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <title>Add Customer</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section th:fragment="addCustomer">
+            <div id="addCustomer" class="modal fade">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-info text-white">
+                            <h5 class="modal-title" th:text="#{template.add}">Add Customer</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <form th:action="@{/save}" th:object="${person}"
+                              method="POST" class="was-validated">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="name" th:text="#{template.name}">Name</label>
+                                    <input type="text" class="form-control" name="name" required="true" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="surname" th:text="#{template.surname}">Surname</label>
+                                    <input type="text" class="form-control" name="surname" required="true" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" th:text="#{template.email}">Email</label>
+                                    <input type="email" class="form-control" name="email" required="true" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone" th:text="#{template.phone}">Phone</label>
+                                    <input type="tel" class="form-control" name="phone" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="balance" th:text="#{person.balance}">Balance</label>
+                                    <input type="number" class="form-control" name="balance" required="true" step="any" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-primary" type="submit" th:text="#{template.save}">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

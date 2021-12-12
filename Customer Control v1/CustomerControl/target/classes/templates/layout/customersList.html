@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <title>Customers List</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <section th:fragment="customersList" id="customers">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>[[#{person.title-list}]]</h4>
+                            </div>
+                            <div th:if="${people != null and !people.empty}">
+                                <table class="table">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>#</th>
+                                            <th th:text="#{template.name}">Name</th>
+                                            <th th:text="#{person.balance}">Balance</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr th:each="people, counter : ${people}">
+                                            <td>[[${counter.count}]]</td>
+                                            <td>[[${people.name} + ' ' + ${people.surname}]]</td>
+                                            <td>[[${new java.text.DecimalFormat('€#,##0.00').format(people.balance)}]]</td>
+                                            <td>
+                                                <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/edit/} + ${people.idPerson}"
+                                                   class="btn btn-secondary">
+                                                    <i class="fas fa-angle-double-right"></i> [[#{template.edit}]]
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/delete(idPerson=${people.idPerson})}"
+                                                   class="btn btn-dark">
+                                                    <i class="fas fa-angle-double-right"></i> [[#{template.delete}]]
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="text-center p-2" th:if="${people == null || people.empty}">
+                                <span th:text="#{person.empty-list}">Empty List</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center bg-danger text-white mb-3">
+                            <div class="card-body">
+                                <h3 th:text="#{person.totalBalance}">Total Balance</h3>
+                                <h4 class="display-4">
+                                    [[${new java.text.DecimalFormat('€#,##0.00').format(totalBalance)}]]
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="card text-center bg-success text-white mb-3">
+                            <div class="card-body">
+                                <h3 th:text="#{person.totalCustomers}">Total Customers</h3>
+                                <h4 class="display-4">
+                                    <i class="fas fa-users"></i> [[${totalCustomers}]]
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
